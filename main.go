@@ -36,9 +36,8 @@ func main() {
 		fmt.Printf("get from etcd failed, err:%v\n", err)
 		return
 	}
-	fmt.Print(resp)
 	for _, ev := range resp.Kvs {
-		fmt.Printf("%s:%s\n", ev.Key, ev.Value)
+		fmt.Printf("key:%s, value:%s\n", ev.Key, ev.Value)
 	}
 
 }
